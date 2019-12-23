@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
                 val _amount = data?.getStringExtra(Add.AMOUNT)
                 val _type = data?.getIntExtra(Add.TYPE,1)
                 val inOutLog = InOutLog(id=10, amount=_amount!!.toFloat(),type=_type!!)
+
+                //TODO: Insert data to the DB using DAO
             }
     }
 
