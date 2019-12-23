@@ -20,4 +20,8 @@ class InOutLogViewModel(application: Application):AndroidViewModel(application) 
         repository = InOutLogRepository(inOutLogDao)
         allLogs = repository.allLogs
     }
+
+    fun insertLog(inOutLog:InOutLog) = viewodelScope.launce{
+        repository.insertLog((inOutLog))
+    }
 }
