@@ -10,7 +10,7 @@ interface InOutLogDao {
     suspend fun insertLog(inOutLog: InOutLog)
 
     @Query("SELECT * FROM in_out_log")
-    suspend fun getLogs() : LiveData<List<InOutLog>>
+    fun getLogs() : LiveData<List<InOutLog>>
 
     @Query("SELECT * FROM in_out_log WHERE id = :ID")
     suspend fun getALog(ID: Int): InOutLog
