@@ -8,9 +8,8 @@ import java.util.*
 @Entity(tableName = "in_out_log")
 class InOutLog(
     @PrimaryKey(autoGenerate = true) val id: Int,
-    val amount : Currency,
+    val amount : Float,
     val type: Int, //1 = income , 0 = expenses
-    val created_at : Date
-
+    val created_at : Long = System.currentTimeMillis()
 
 )

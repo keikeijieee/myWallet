@@ -7,8 +7,8 @@ import androidx.room.RoomDatabase
 
 @Database(entities = arrayOf(InOutLog::class),version =1)
 abstract class InOutLogDatabase : RoomDatabase() {
-    //Ensure only one instance of the databse is created
 
+    //Ensure only one instance of the databse is created
     abstract fun inOutLogDao(): InOutLogDao
 
     companion object {
